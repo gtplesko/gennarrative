@@ -1,0 +1,19 @@
+<mat-card>
+<mat-card-title>
+  {{title}}
+</mat-card-title>
+<mat-card-content>
+<table>
+  <thead>
+    <tr>
+      <td *ngFor="let col of header">{{col}}</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <td *ngFor="let col of header">{{row[col]}}</td>
+    </tr>
+  </tbody>
+</table>
+</mat-card-content>
+</mat-card>
