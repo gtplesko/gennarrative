@@ -15,14 +15,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { TableComponent } from './table/table.component';
-import { SwordData } from './sampleData';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     GennavComponent,
-    TableComponent,
-    SwordData
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +35,8 @@ import { SwordData } from './sampleData';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

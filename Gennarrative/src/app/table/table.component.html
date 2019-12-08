@@ -1,17 +1,18 @@
 <mat-card>
 <mat-card-title>
-  {{title}}
+  {{title}} {{checkList}}
 </mat-card-title>
 <mat-card-content>
 <table>
-  <thead>
-    <tr>
-      <td *ngFor="let col of header">{{col}}</td>
-    </tr>
-  </thead>
   <tbody>
-    <tr *ngFor="let row of data">
-      <td *ngFor="let col of header">{{row[col]}}</td>
+    <tr *ngFor="let col of dataRender; let i = index" [ngClass]="{'checked':checkList[i]}">
+      <th>        
+        <label class="container">{{header[i]}}
+          <input type="checkbox" [(ngModel)]="checkList[i]">
+          <span class="checkmark"></span>
+        </label>
+      </th>
+      <td *ngFor="let row of dataRender[i] ">{{row}}</td>
     </tr>
   </tbody>
 </table>

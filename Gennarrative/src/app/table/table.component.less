@@ -2,46 +2,105 @@ table {
   width: 100%;
 }
 
-tr.example-detail-row {
+tr { 
+  display:block;
+  border: dotted 1px #ccc;
+  max-width: 100%;
+}
+th{
+  border-right: solid 4px #ccc;
+  border-bottom: solid 1px #ccc;
+  min-width: 100px;
+  text-align: left;
+  display:inline-block;
+}
+
+td { 
+  display:inline-block;
+  padding:10px 8px;
+  border-right: dashed 1px #ccc;
+  min-width: 30px;
+  white-space: nowrap;
+}
+td:last-of-type{
+  border-right: solid 0px transparent;
+}
+td:hover, tr th:hover, tr.checked{
+  background-color: #cc7777;
+  border-color: #f33;
+  cursor: pointer;
+}
+.selector{
+  text-align: right;
+  border: 0px solid #000;
+}
+.selector:hover{
+  background-color: transparent;
+  border-color: transparent;
+  cursor: initial;
+}
+ /* Customize the label (the container) */
+ .container {
+  display: inline-block;
+  position: relative;
+  padding: 10px 10px 10px 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
   height: 0;
+  width: 0;
 }
 
-tr.example-element-row:not(.example-expanded-row):hover {
-  background: #777;
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
 }
 
-tr.example-element-row:not(.example-expanded-row):active {
-  background: #efefef;
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
 }
 
-.example-element-row td {
-  border-bottom-width: 0;
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
 }
 
-.example-element-detail {
-  overflow: hidden;
-  display: flex;
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
-.example-element-diagram {
-  min-width: 80px;
-  border: 2px solid black;
-  padding: 8px;
-  font-weight: lighter;
-  margin: 8px 0;
-  height: 104px;
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
 }
 
-.example-element-symbol {
-  font-weight: bold;
-  font-size: 40px;
-  line-height: normal;
-}
-
-.example-element-description {
-  padding: 16px;
-}
-
-.example-element-description-attribution {
-  opacity: 0.5;
-}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 3px;
+  top: 1px;
+  width: 5px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} 
