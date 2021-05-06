@@ -1,0 +1,6 @@
+@import 'variables';
+.header-container {
+    padding: $margin;
+    width: calc(100% - (#{$margin} * 2));
+    text-align: center;
+}

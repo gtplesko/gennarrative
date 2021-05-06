@@ -1,0 +1,11 @@
+<div class="loading-container" [ngClass]="visibility" *ngIf="!loadState.loaded">
+    {{loadState.loaded}}
+    <div class="loading-items">
+        <span *ngFor="let item of loadState.data | keyvalue">
+            <div *ngIf="item.value">
+                {{item.key}}, 
+                {{item.value}}
+            </div>
+        </span>
+    </div>
+</div>

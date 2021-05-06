@@ -1,0 +1,10 @@
+@import 'variables';
+.card-container {
+    background-color: #fff;
+    border: $border;
+    border-radius: $margin;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    box-shadow: $shadow;
+    margin: $margin;
+}

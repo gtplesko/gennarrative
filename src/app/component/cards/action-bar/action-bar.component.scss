@@ -1,0 +1,7 @@
+@import "variables";
+.action-bar-container {
+    margin: $margin;
+    padding: $margin;
+    border-top: 1px solid $primary;
+    text-align: right;
+}

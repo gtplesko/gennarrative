@@ -1,0 +1,13 @@
+@import "variables";
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+    overflow: auto;
+}
+.card-col {
+    flex-direction: column;
+    flex: 1 1;
+}

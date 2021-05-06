@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+body, html {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100%;
+    width: 100%;
+    background-color: $background;
+    font: $copy;
+    color: $dark;
+}
+
+div.primary {
+    background-color: $primary;
+}
+div.accent {
+    background-color: $accent;
+}
+div.dark {
+    background-color: $dark;
+}
+div.highlight {
+    background-color: $highlight;
+}
+div.background {
+    background-color: $background;
+}
+
+span.primary {
+    color: $primary;
+}
+span.accent {
+    color: $accent;
+}
+span.dark {
+    color: $dark;
+}
+span.highlight {
+    color: $highlight;
+}
+span.background {
+    color: $background;
+}
+

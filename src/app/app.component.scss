@@ -1,0 +1,19 @@
+::ng-deep * {
+    margin: 0;
+    padding: 0;
+  }
+
+.circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+    span {
+        display: inline-block;
+        padding-top: 20px;
+    }
+}
+.cards {
+    display: flex;
+}

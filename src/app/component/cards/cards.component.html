@@ -1,0 +1,20 @@
+<div id="container"  
+infinite-scroll
+[infiniteScrollDistance]="distToScroll"
+[infiniteScrollThrottle]="250"
+(scrolled)="createDummy();createDummy();createDummy();createDummy();createDummy();createDummy();"
+(window:resize)="resizeCards()">
+    <div class="card-col" *ngFor="let col of itemInRowRange">
+        <app-card *ngFor="let card of col" class="card-item">
+            <app-header>
+                {{card.header}}
+            </app-header>
+            <app-body-copy>
+                {{card.copy}}
+            </app-body-copy>
+            <app-action-bar>
+                {{card.cta}}
+            </app-action-bar>
+        </app-card>
+    </div>
+</div>
